@@ -1,180 +1,223 @@
+/* =========================================
+   CONFIGURAÇÃO GERAL
+========================================= */
+
 * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-
     min-height: 100vh;
 
     background:
         repeating-linear-gradient(
             45deg,
-            #080808,
-            #080808 20px,
-            #171717 20px,
-            #171717 40px
+            #160b24,
+            #160b24 20px,
+            #241238 20px,
+            #241238 40px
         );
 
-    color: white;
+    color: #f8eaff;
 
-    font-family: "Comic Sans MS", "Times New Roman", cursive;
+    font-family:
+        "Comic Sans MS",
+        "Times New Roman",
+        cursive;
 
     overflow-x: hidden;
 }
 
 
-/* CONTAINER */
+/* =========================================
+   CONTAINER PRINCIPAL
+========================================= */
 
 .container {
-    width: 95%;
+    width: 92%;
+    max-width: 950px;
 
-    max-width: 1200px;
+    margin: auto;
 
-    margin: 0 auto;
-
-    padding: 35px 25px 100px;
-
-    position: relative;
+    padding: 30px 25px 70px;
 }
 
 
-/* TÍTULO */
+/* =========================================
+   TÍTULO
+========================================= */
 
 h1 {
-    font-family: Impact, "Arial Black", sans-serif;
+    font-family:
+        Impact,
+        "Arial Black",
+        sans-serif;
 
-    font-size: 52px;
+    font-size: 42px;
 
-    color: yellow;
+    color: #e9b3ff;
 
     text-shadow:
-        5px 5px 0 red,
-        -3px -3px 0 blue;
+        4px 4px 0 #8e24aa,
+        -3px -3px 0 #ff66ff;
 
     transform: rotate(-1deg);
 
-    margin-bottom: 35px;
+    margin: 0 0 28px 0;
 }
 
 
-/* TEXTO */
-
-p {
-    font-size: 25px;
-
-    line-height: 1.5;
-}
+/* =========================================
+   TEXTO INICIAL
+========================================= */
 
 .intro {
-    color: cyan;
+    display: inline-block;
+
+    padding: 14px 20px;
+
+    background: #6a1b9a;
+
+    color: #ffd6ff;
+
+    font-size: 20px;
 
     font-weight: bold;
 
-    background: purple;
-
-    padding: 15px;
-
-    width: fit-content;
+    border: 5px dashed #e0aaff;
 
     transform: rotate(1deg);
+
+    margin-bottom: 25px;
 }
 
 
-/* CAMPOS */
+/* =========================================
+   CAMPOS
+========================================= */
 
 .campo {
-    margin-top: 35px;
-
     padding: 20px;
 
-    border: 5px dashed magenta;
+    margin-top: 25px;
 
-    background-color: #151515;
+    background: #21102f;
+
+    border: 5px dashed #d66cff;
 
     width: 90%;
 }
 
+
+/* Nome fica deslocado */
+
 .campo.nome {
-    margin-left: 5%;
+    margin-left: 3%;
 }
+
+
+/* Senha fica deslocada */
 
 .campo.senha {
-    margin-left: 20%;
+    margin-left: 10%;
 
-    border-color: lime;
+    border-color: #b84dff;
 }
+
+
+/* =========================================
+   LABELS
+========================================= */
 
 label {
     display: block;
 
-    font-size: 30px;
+    font-size: 24px;
 
     font-weight: bold;
 
-    color: orange;
+    color: #e7a5ff;
 
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
+
+
+/* =========================================
+   INPUTS
+========================================= */
 
 input {
     width: 500px;
 
-    max-width: 90%;
+    max-width: 100%;
 
-    height: 55px;
+    height: 52px;
 
-    font-size: 25px;
+    padding: 8px 12px;
 
-    padding: 10px;
+    font-size: 21px;
 
-    border: 5px solid yellow;
+    background: #faf0ff;
 
-    background: white;
+    color: #2a1238;
 
-    color: black;
+    border: 5px solid #b44cff;
+
+    border-radius: 4px;
 }
+
+
+/* Efeito propositalmente horrível */
 
 input:focus {
-    outline: 8px dotted red;
+    outline: 6px dotted #ff66ff;
 
-    background: pink;
+    background: #ead0ff;
 }
 
 
-/* MENSAGEM ABSURDA */
+/* =========================================
+   MENSAGEM DO NOME
+========================================= */
 
 #mensagemNome {
     display: block;
 
-    margin-top: 15px;
-
-    font-size: 22px;
-
-    color: red;
-
-    background: yellow;
-
-    padding: 8px;
-
     width: fit-content;
+
+    margin-top: 12px;
+
+    padding: 8px 12px;
+
+    background: #c77dff;
+
+    color: #31004d;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    border: 3px solid #7b1fa2;
 }
 
 
-/* REGRA DA SENHA */
+/* =========================================
+   REGRA DA SENHA
+========================================= */
 
 .regra {
-    margin-top: 40px;
+    margin-top: 30px;
 
-    padding: 25px;
+    padding: 18px;
 
-    background: red;
+    background: #7b1fa2;
 
-    color: yellow;
+    color: #f7d9ff;
 
-    border: 8px double white;
+    border: 7px double #e0aaff;
 
-    font-size: 27px;
+    font-size: 21px;
 
     font-weight: bold;
 
@@ -182,155 +225,175 @@ input:focus {
 }
 
 
-/* BOTÕES */
+/* =========================================
+   BOTÕES
+========================================= */
 
 .botoes {
     display: flex;
 
-    gap: 40px;
+    gap: 30px;
 
-    margin-top: 45px;
+    margin-top: 35px;
 
     align-items: center;
 
     flex-wrap: wrap;
 }
 
+
 button {
-    min-width: 230px;
+    min-width: 200px;
 
-    min-height: 75px;
+    min-height: 65px;
 
-    padding: 15px 30px;
-
-    font-size: 25px;
-
-    font-weight: bold;
+    padding: 14px 25px;
 
     font-family: Arial, sans-serif;
 
+    font-size: 21px;
+
+    font-weight: bold;
+
     cursor: pointer;
 
-    border-radius: 20px;
+    border-radius: 16px;
 
     transition: 0.15s;
 }
 
 
-/* CANCELAR VERDE */
+/* =========================================
+   BOTÃO CANCELAR
+========================================= */
 
 .cancelar {
-    background: lime;
+    background: #c77dff;
 
-    color: black;
+    color: #240033;
 
-    border: 8px solid green;
+    border: 6px solid #7b1fa2;
 
     box-shadow:
-        10px 10px 0 darkgreen;
+        8px 8px 0 #4a126b;
 
     transform: rotate(-4deg);
 }
 
 
-/* AVANÇAR VERMELHO */
-
-.avancar {
-    background: red;
-
-    color: white;
-
-    border: 8px solid darkred;
-
-    box-shadow:
-        10px 10px 0 #550000;
-
-    transform: rotate(5deg);
-
-    font-size: 30px;
-}
-
-.avancar:hover {
-    background: #ff5555;
-
-    transform:
-        rotate(-5deg)
-        scale(1.1);
-}
-
 .cancelar:hover {
-    background: #66ff66;
+    background: #dfadff;
 
     transform:
         rotate(5deg)
-        scale(1.1);
+        scale(1.05);
 }
 
 
-/* TELA FINAL */
+/* =========================================
+   BOTÃO AVANÇAR
+========================================= */
+
+.avancar {
+    background: #8e24aa;
+
+    color: #ffe8ff;
+
+    border: 6px solid #4a126b;
+
+    box-shadow:
+        8px 8px 0 #25002f;
+
+    transform: rotate(5deg);
+
+    font-size: 24px;
+}
+
+
+.avancar:hover {
+    background: #ab47bc;
+
+    transform:
+        rotate(-5deg)
+        scale(1.05);
+}
+
+
+/* =========================================
+   TELA FINAL
+========================================= */
 
 .parabens {
-    margin-top: 70px;
+    margin-top: 60px;
 
-    padding: 35px;
+    padding: 30px;
 
-    background: linear-gradient(
-        90deg,
-        red,
-        yellow,
-        lime,
-        cyan,
-        blue,
-        magenta
-    );
+    background:
+        linear-gradient(
+            90deg,
+            #6a1b9a,
+            #9c27b0,
+            #ba68c8,
+            #ce93d8,
+            #9c27b0,
+            #6a1b9a
+        );
 
-    border: 15px ridge white;
+    border: 10px ridge #f0caff;
 
-    color: black;
+    color: #240033;
 
     text-align: center;
 
     transform: rotate(-2deg);
 }
 
+
 .parabens h2 {
-    font-family: Impact, sans-serif;
+    margin: 0 0 20px;
 
-    font-size: 55px;
+    font-family:
+        Impact,
+        sans-serif;
 
-    margin: 0 0 25px;
+    font-size: 44px;
 
-    color: white;
+    color: #ffe6ff;
 
     text-shadow:
-        4px 4px red,
-        -4px -4px blue;
+        4px 4px #6a1b9a,
+        -4px -4px #ff66ff;
 }
 
+
 .parabens p {
-    font-size: 30px;
+    font-size: 22px;
 
     font-weight: bold;
 }
 
 
-/* ESCONDIDO */
+/* =========================================
+   ESCONDER PARABÉNS
+========================================= */
 
 .escondido {
     display: none;
 }
 
 
-/* TOMATES */
+/* =========================================
+   TOMATES
+========================================= */
 
 .tomate {
     position: fixed;
 
-    top: -100px;
+    top: -80px;
 
     left: 0;
 
-    font-size: 70px;
+    font-size: 55px;
 
     z-index: 9999;
 
@@ -348,7 +411,7 @@ button {
 
     0% {
         transform:
-            translateY(-100px)
+            translateY(-80px)
             translateX(0)
             rotate(0deg);
 
@@ -373,7 +436,9 @@ button {
 }
 
 
-/* MENSAGEM DE CAOS */
+/* =========================================
+   MENSAGEM DE CAOS
+========================================= */
 
 #mensagemCaos {
     position: fixed;
@@ -384,30 +449,36 @@ button {
 
     transform: translateX(-50%);
 
-    background: yellow;
-
-    color: red;
-
-    border: 5px solid red;
-
-    padding: 15px 25px;
-
-    font-size: 24px;
-
-    font-weight: bold;
-
     z-index: 10000;
 
     display: none;
+
+    padding: 15px 22px;
+
+    background: #e0aaff;
+
+    color: #3b0055;
+
+    border: 5px solid #8e24aa;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    max-width: 90%;
 }
 
 
-/* CELULAR */
+/* =========================================
+   CELULAR
+========================================= */
 
 @media (max-width: 700px) {
 
     h1 {
-        font-size: 38px;
+        font-size: 32px;
     }
 
     .campo,
@@ -432,4 +503,7 @@ button {
         width: 100%;
     }
 
+    .parabens h2 {
+        font-size: 34px;
+    }
 }

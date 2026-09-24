@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
 
 <body>
 
+    <!-- Área onde os tomates serão criados -->
     <div id="tomates"></div>
 
     <main class="container">
@@ -22,7 +24,10 @@
             NÃO DEMORE!!!
         </p>
 
+
         <form id="formulario">
+
+            <!-- NOME -->
 
             <div class="campo nome">
 
@@ -44,6 +49,8 @@
             </div>
 
 
+            <!-- SENHA -->
+
             <div class="campo senha">
 
                 <label for="senha">
@@ -53,18 +60,22 @@
                 <input
                     type="text"
                     id="senha"
-                    placeholder="Crie uma senha"
+                    placeholder="Digite sua senha..."
                     autocomplete="off"
                 >
 
             </div>
 
 
+            <!-- REGRA ABSURDA -->
+
             <p class="regra">
-                ⚠️ A senha deve ter exatamente 12 letras
-                E UM EMOJI DE FRUTA 🍎
+                ⚠️ A SENHA DEVE TER EXATAMENTE
+                12 NÚMEROS E UM EMOJI DE FRUTA 🍎
             </p>
 
+
+            <!-- BOTÕES -->
 
             <div class="botoes">
 
@@ -75,6 +86,7 @@
                 >
                     CANCELAR
                 </button>
+
 
                 <button
                     type="submit"
@@ -89,12 +101,16 @@
         </form>
 
 
+        <!-- TELA FINAL -->
+
         <section
             id="final"
             class="parabens escondido"
         >
 
-            <h2>🎉 PARABÉNS!!! 🎉</h2>
+            <h2>
+                🎉 PARABÉNS!!! 🎉
+            </h2>
 
             <p>
                 VOCÊ CONSEGUIU SOBREVIVER À PIOR
@@ -102,16 +118,21 @@
             </p>
 
             <p>
-                🍅🍅🍅 VOCÊ VENCEU!!! 🍅🍅🍅
+                🍅 🍅 🍅 VOCÊ VENCEU! 🍅 🍅 🍅
             </p>
 
         </section>
 
     </main>
 
+
+    <!-- MENSAGEM DE ERRO/CAOS -->
+
     <div id="mensagemCaos"></div>
+
 
     <script src="script.js"></script>
 
 </body>
+
 </html>
