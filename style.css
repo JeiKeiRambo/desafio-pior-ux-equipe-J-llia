@@ -1,0 +1,435 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    min-height: 100vh;
+
+    background:
+        repeating-linear-gradient(
+            45deg,
+            #080808,
+            #080808 20px,
+            #171717 20px,
+            #171717 40px
+        );
+
+    color: white;
+
+    font-family: "Comic Sans MS", "Times New Roman", cursive;
+
+    overflow-x: hidden;
+}
+
+
+/* CONTAINER */
+
+.container {
+    width: 95%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 35px 25px 100px;
+
+    position: relative;
+}
+
+
+/* TÍTULO */
+
+h1 {
+    font-family: Impact, "Arial Black", sans-serif;
+
+    font-size: 52px;
+
+    color: yellow;
+
+    text-shadow:
+        5px 5px 0 red,
+        -3px -3px 0 blue;
+
+    transform: rotate(-1deg);
+
+    margin-bottom: 35px;
+}
+
+
+/* TEXTO */
+
+p {
+    font-size: 25px;
+
+    line-height: 1.5;
+}
+
+.intro {
+    color: cyan;
+
+    font-weight: bold;
+
+    background: purple;
+
+    padding: 15px;
+
+    width: fit-content;
+
+    transform: rotate(1deg);
+}
+
+
+/* CAMPOS */
+
+.campo {
+    margin-top: 35px;
+
+    padding: 20px;
+
+    border: 5px dashed magenta;
+
+    background-color: #151515;
+
+    width: 90%;
+}
+
+.campo.nome {
+    margin-left: 5%;
+}
+
+.campo.senha {
+    margin-left: 20%;
+
+    border-color: lime;
+}
+
+label {
+    display: block;
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    color: orange;
+
+    margin-bottom: 12px;
+}
+
+input {
+    width: 500px;
+
+    max-width: 90%;
+
+    height: 55px;
+
+    font-size: 25px;
+
+    padding: 10px;
+
+    border: 5px solid yellow;
+
+    background: white;
+
+    color: black;
+}
+
+input:focus {
+    outline: 8px dotted red;
+
+    background: pink;
+}
+
+
+/* MENSAGEM ABSURDA */
+
+#mensagemNome {
+    display: block;
+
+    margin-top: 15px;
+
+    font-size: 22px;
+
+    color: red;
+
+    background: yellow;
+
+    padding: 8px;
+
+    width: fit-content;
+}
+
+
+/* REGRA DA SENHA */
+
+.regra {
+    margin-top: 40px;
+
+    padding: 25px;
+
+    background: red;
+
+    color: yellow;
+
+    border: 8px double white;
+
+    font-size: 27px;
+
+    font-weight: bold;
+
+    transform: rotate(1deg);
+}
+
+
+/* BOTÕES */
+
+.botoes {
+    display: flex;
+
+    gap: 40px;
+
+    margin-top: 45px;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+}
+
+button {
+    min-width: 230px;
+
+    min-height: 75px;
+
+    padding: 15px 30px;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    font-family: Arial, sans-serif;
+
+    cursor: pointer;
+
+    border-radius: 20px;
+
+    transition: 0.15s;
+}
+
+
+/* CANCELAR VERDE */
+
+.cancelar {
+    background: lime;
+
+    color: black;
+
+    border: 8px solid green;
+
+    box-shadow:
+        10px 10px 0 darkgreen;
+
+    transform: rotate(-4deg);
+}
+
+
+/* AVANÇAR VERMELHO */
+
+.avancar {
+    background: red;
+
+    color: white;
+
+    border: 8px solid darkred;
+
+    box-shadow:
+        10px 10px 0 #550000;
+
+    transform: rotate(5deg);
+
+    font-size: 30px;
+}
+
+.avancar:hover {
+    background: #ff5555;
+
+    transform:
+        rotate(-5deg)
+        scale(1.1);
+}
+
+.cancelar:hover {
+    background: #66ff66;
+
+    transform:
+        rotate(5deg)
+        scale(1.1);
+}
+
+
+/* TELA FINAL */
+
+.parabens {
+    margin-top: 70px;
+
+    padding: 35px;
+
+    background: linear-gradient(
+        90deg,
+        red,
+        yellow,
+        lime,
+        cyan,
+        blue,
+        magenta
+    );
+
+    border: 15px ridge white;
+
+    color: black;
+
+    text-align: center;
+
+    transform: rotate(-2deg);
+}
+
+.parabens h2 {
+    font-family: Impact, sans-serif;
+
+    font-size: 55px;
+
+    margin: 0 0 25px;
+
+    color: white;
+
+    text-shadow:
+        4px 4px red,
+        -4px -4px blue;
+}
+
+.parabens p {
+    font-size: 30px;
+
+    font-weight: bold;
+}
+
+
+/* ESCONDIDO */
+
+.escondido {
+    display: none;
+}
+
+
+/* TOMATES */
+
+.tomate {
+    position: fixed;
+
+    top: -100px;
+
+    left: 0;
+
+    font-size: 70px;
+
+    z-index: 9999;
+
+    pointer-events: none;
+
+    animation-name: jogarTomate;
+
+    animation-timing-function: linear;
+
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes jogarTomate {
+
+    0% {
+        transform:
+            translateY(-100px)
+            translateX(0)
+            rotate(0deg);
+
+        opacity: 1;
+    }
+
+    50% {
+        transform:
+            translateY(50vh)
+            translateX(100px)
+            rotate(360deg);
+    }
+
+    100% {
+        transform:
+            translateY(110vh)
+            translateX(var(--deslocamento))
+            rotate(900deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* MENSAGEM DE CAOS */
+
+#mensagemCaos {
+    position: fixed;
+
+    bottom: 20px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: yellow;
+
+    color: red;
+
+    border: 5px solid red;
+
+    padding: 15px 25px;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    z-index: 10000;
+
+    display: none;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 700px) {
+
+    h1 {
+        font-size: 38px;
+    }
+
+    .campo,
+    .campo.nome,
+    .campo.senha {
+        width: 100%;
+
+        margin-left: 0;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    .botoes {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    button {
+        width: 100%;
+    }
+
+}

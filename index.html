@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Criar Conta de Acesso</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="tomates"></div>
+
+    <main class="container">
+
+        <h1>CRIAR CONTA DE ACESSO!!!</h1>
+
+        <p class="intro">
+            Preencha os seus dados rapidamente abaixo.
+            NÃO DEMORE!!!
+        </p>
+
+        <form id="formulario">
+
+            <div class="campo nome">
+
+                <label for="nome">
+                    NOME COMPLETO:
+                </label>
+
+                <input
+                    type="text"
+                    id="nome"
+                    placeholder="Digite seu nome..."
+                    autocomplete="off"
+                >
+
+                <span id="mensagemNome">
+                    O tempo para digitar o nome acabou!
+                </span>
+
+            </div>
+
+
+            <div class="campo senha">
+
+                <label for="senha">
+                    SENHA:
+                </label>
+
+                <input
+                    type="text"
+                    id="senha"
+                    placeholder="Crie uma senha"
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <p class="regra">
+                ⚠️ A senha deve ter exatamente 12 letras
+                E UM EMOJI DE FRUTA 🍎
+            </p>
+
+
+            <div class="botoes">
+
+                <button
+                    type="button"
+                    id="cancelar"
+                    class="cancelar"
+                >
+                    CANCELAR
+                </button>
+
+                <button
+                    type="submit"
+                    id="avancar"
+                    class="avancar"
+                >
+                    AVANÇAR
+                </button>
+
+            </div>
+
+        </form>
+
+
+        <section
+            id="final"
+            class="parabens escondido"
+        >
+
+            <h2>🎉 PARABÉNS!!! 🎉</h2>
+
+            <p>
+                VOCÊ CONSEGUIU SOBREVIVER À PIOR
+                EXPERIÊNCIA DE USUÁRIO!
+            </p>
+
+            <p>
+                🍅🍅🍅 VOCÊ VENCEU!!! 🍅🍅🍅
+            </p>
+
+        </section>
+
+    </main>
+
+    <div id="mensagemCaos"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
